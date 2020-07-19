@@ -1,6 +1,7 @@
 import './App.scss';
 import Blog from './components/Blog';
 import Navbar from './components/Navbar';
+import Spinner from './components/Spinner';
 
 import React, {lazy, useState, Suspense} from 'react';
 import {Route, Redirect, Switch, useLocation} from 'react-router-dom';
@@ -45,7 +46,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Suspense fallback={<div />}>
+      <Suspense fallback={<Spinner />}>
         <LanguageSwitcher
           {...{showLanguageSwitcher, setShowLanguageSwitcher}}
         />

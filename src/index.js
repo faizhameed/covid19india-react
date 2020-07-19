@@ -1,4 +1,5 @@
 // import './wdyr';
+import Spinner from './components/Spinner';
 import * as serviceWorker from './serviceWorker';
 import './i18n';
 
@@ -11,7 +12,7 @@ const rootElement = document.getElementById('root');
 
 const main = () =>
   render(
-    <Suspense fallback={<div />}>
+    <Suspense fallback={<Spinner />}>
       <Router>
         <App />
       </Router>
